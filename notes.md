@@ -10,3 +10,7 @@
 ### Configurar devTools para auto deploy
 ![](images/settingsCompiler.png)
 ![](images/settingsAdv.png)
+
+## POST
+![](images/POSTElements.png)
+![](images/recordDTO.png)
