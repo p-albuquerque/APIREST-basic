@@ -46,4 +46,17 @@ Spring Data JPA dispõe algumas ferramentas para persistir dados no banco,
 
 Uma vez criada, usaremos essa interface para persistir os dados (nesse caso, relacionados aos médicos).
 Podemos criar uma instância dessa interface na classe onde desejamos usar, mas como se trata de algo herdado do spring, podemos usar **injeção de dependencia**(Autowired) e o próprio spring vai trazer a instância dela:
-![](images/depInject.png)
+![](images/transacInjec.png)
+
+### Migration
+Sempre que evoluímos nosso projeto, seja criando novas tabelas, colunas, ou qualquer alteração a a nível de estrutura de banco de dados, usa-se ferramentas de migração
+
+#### Flyway
+1- Dentro do módulo do projeto, no diretório de resource, cria-se os diretórios **db/migration**
+2- Dentro desse diretório, criar arquivo SQL que contém o script da alteração da alteração em questão
+2.1- V1__create-table-medicos.sql -> V1: primeira modificação do banco (exemplo: criação das tabelas de médicos suas colunas), V2__[referencia-a-mudanca].sql, .... Dessa forma, mantém-se um histórico de cada alteração que foi executada ao longo do projeto
+Assim que o projeto for executado, após a criação de alguma migration, o comando sql é executado e as alterações efetivadas
+
+### Bean validation
+Validações pré importadas pela lib validator do spring. Aplica-se através de annotations específicas sobre cada parâmetro que se deseja validar
+![](images/beanValid.png)
