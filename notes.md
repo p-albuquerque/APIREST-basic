@@ -38,3 +38,12 @@ LOMBOK: Com essa dependência, temos acesso a uma série de annotations que faci
 - NoArgsConstructor: cria um construtor sem parâmetros (demanda do JPA)
 - AllArgsConstructor: crua um construtor com todos os parâmetros, para podermos instanciá-lo
 - EqualsAndHashCode: Gerar equals e hashCode levando em conta o id;
+
+### Repository
+Spring Data JPA dispõe algumas ferramentas para persistir dados no banco,
+- JpaRepositoy: Deve-se criar uma interface com suffixo _Repository_ e extende-la d`JpaRepository`. Usando dois generics, a entidade que ela irá representar e o atributo do PK (geralmente long)
+![](images/repository.png)
+
+Uma vez criada, usaremos essa interface para persistir os dados (nesse caso, relacionados aos médicos).
+Podemos criar uma instância dessa interface na classe onde desejamos usar, mas como se trata de algo herdado do spring, podemos usar **injeção de dependencia**(Autowired) e o próprio spring vai trazer a instância dela:
+![](images/depInject.png)
