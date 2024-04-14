@@ -60,3 +60,12 @@ Assim que o projeto for executado, após a criação de alguma migration, o coma
 ### Bean validation
 Validações pré importadas pela lib validator do spring. Aplica-se através de annotations específicas sobre cada parâmetro que se deseja validar
 ![](images/beanValid.png)
+
+## GET
+Para retornar apenas uma parcela das colunas existentes na tabela Médico, podemos criar um DTO diferente do usado no POST, uma vez que este primeiro possui todas as colunas:
+Este novo DTO precisará conter um construtor, uma vez que seus dados não vão vir mais do requestBody, e sim do JPA que está dentro do nosso serviço, então ele precisa ser instanciado:
+![](images/DTOGet.png)
+
+Para passar os dados que o repository trás, precisa-se adaptar esses valores, o construtor anterior já garante esse parser. Então só precisamos passar cada resultado da listagem de Medico, para um
+construtor deste DTO
+![](images/JPAtoDTOGet.png)
