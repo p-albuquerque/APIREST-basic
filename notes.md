@@ -69,3 +69,13 @@ Este novo DTO precisará conter um construtor, uma vez que seus dados não vão 
 Para passar os dados que o repository trás, precisa-se adaptar esses valores, o construtor anterior já garante esse parser. Então só precisamos passar cada resultado da listagem de Medico, para um
 construtor deste DTO
 ![](images/JPAtoDTOGet.png)
+
+### Paginação
+Digamos que queremos limitar os resultados a 10 por vez/por página. O Spring facilita esse processo: Pageable do spring
+![](images/page.png)
+![](images/pageRequest.png)
+
+### Ordenação:
+Não é preciso fazer nenhuma a nível de código, basta manipular a url de request:
+![](images/sort.png)
+![](images/size&sortDefault.png)
