@@ -47,6 +47,7 @@ Spring Data JPA dispõe algumas ferramentas para persistir dados no banco,
 Uma vez criada, usaremos essa interface para persistir os dados (nesse caso, relacionados aos médicos).
 Podemos criar uma instância dessa interface na classe onde desejamos usar, mas como se trata de algo herdado do spring, podemos usar **injeção de dependencia**(Autowired) e o próprio spring vai trazer a instância dela:
 ![](images/transacInjec.png)
+NOTE: transactional só necessário quando estamos escrevendo/sobrescrevendo dados no banco
 
 ### Migration
 Sempre que evoluímos nosso projeto, seja criando novas tabelas, colunas, ou qualquer alteração a a nível de estrutura de banco de dados, usa-se ferramentas de migração
@@ -79,3 +80,6 @@ Digamos que queremos limitar os resultados a 10 por vez/por página. O Spring fa
 Não é preciso fazer nenhuma a nível de código, basta manipular a url de request:
 ![](images/sort.png)
 ![](images/size&sortDefault.png)
+
+## PUT
+![](images/putReq.png)
