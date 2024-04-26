@@ -83,3 +83,9 @@ Não é preciso fazer nenhuma a nível de código, basta manipular a url de requ
 
 ## PUT
 ![](images/putReq.png)
+
+## DELETE
+![](images/delReq.png)
+
+### Exclução lógica
+Tal qual o update, o endpoint irá marcar como false a coluna de **active** de um médico identificado pelo ID passado no parâmetro da URL
