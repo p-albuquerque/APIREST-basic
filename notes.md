@@ -89,3 +89,6 @@ Não é preciso fazer nenhuma a nível de código, basta manipular a url de requ
 
 ### Exclução lógica
 Tal qual o update, o endpoint irá marcar como false a coluna de **active** de um médico identificado pelo ID passado no parâmetro da URL
+
+## Criando finders a partir do repository interface
+![](images/finder.png)
